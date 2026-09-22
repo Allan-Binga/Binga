@@ -10,42 +10,66 @@
     "opsz" 20;
   vertical-align: middle;
 }
-/* Brand custom strict palette utility wrappers */
+/* Shared theme tokens keep cards, diagrams and navigation in sync. */
+:root {
+  color-scheme: light;
+  --page: #faf7f2;
+  --card: #ffffff;
+  --surface: #fff7fb;
+  --surface-low: #f9f2f6;
+  --blush: #f4e8ec;
+  --text: #242124;
+  --muted: #625b60;
+  --border: #e5dde0;
+  --accent: #800020;
+}
+:root.dark {
+  color-scheme: dark;
+  --page: #181619;
+  --card: #242125;
+  --surface: #201c20;
+  --surface-low: #201c20;
+  --blush: #39252d;
+  --text: #f5eef1;
+  --muted: #c3b7bd;
+  --border: #51434b;
+  --accent: #ff9bb5;
+}
 body {
-  background-color: #faf7f2;
-  color: #242124;
+  background-color: var(--page);
+  color: var(--text);
   font-family: "Hanken Grotesk", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 .custom-hairline {
-  border-color: #e5dde0;
+  border-color: var(--border);
 }
 .bg-ivory {
-  background-color: #faf7f2;
+  background-color: var(--page);
 }
 .bg-pale-blush {
-  background-color: #f4e8ec;
+  background-color: var(--blush);
 }
 .text-charcoal {
-  color: #242124;
+  color: var(--text);
 }
 .text-muted-gray {
-  color: #625b60;
+  color: var(--muted);
 }
 .border-soft-neutral {
-  border-color: #e5dde0;
+  border-color: var(--border);
 }
 .bg-burgundy-primary {
-  background-color: #800020;
+  background-color: var(--accent);
 }
 .bg-burgundy-hover:hover {
   background-color: #5c0017;
 }
 .text-burgundy {
-  color: #800020;
+  color: var(--accent);
 }
 .border-burgundy {
-  border-color: #800020;
+  border-color: var(--accent);
 }
 
 html {
@@ -61,7 +85,7 @@ main[id] {
   scroll-margin-top: 8rem;
 }
 :focus-visible {
-  outline: 2px solid #800020;
+  outline: 2px solid var(--accent);
   outline-offset: 4px;
 }
 .skip-link {
@@ -129,3 +153,7 @@ p {
     transition: none !important;
   }
 }
+
+/* Button labels and QR quiet zones remain white in both themes. */
+.text-white { color: #fff; }
+.certificate-qr { background: #fff; }

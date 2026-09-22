@@ -37,7 +37,7 @@ export default function Hero() {
             </span>
           </a>
           <a
-            className="inline-flex items-center gap-2 bg-white border border-soft-neutral text-charcoal hover:border-[#800020] hover:bg-[#FAF7F2] px-5 py-3 rounded font-body-md text-body-md font-medium transition-colors"
+            className="inline-flex items-center gap-2 bg-white border border-soft-neutral text-charcoal hover:border-[#800020] hover:bg-ivory px-5 py-3 rounded font-body-md text-body-md font-medium transition-colors"
             href="mailto:allanbinga8@gmail.com"
           >
             <span>Get in touch</span>

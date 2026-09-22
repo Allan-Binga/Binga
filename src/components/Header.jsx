@@ -1,3 +1,4 @@
+import ThemeToggle from "./ThemeToggle.jsx";
 import MobileMenu from "./MobileMenu.jsx";
 export default function Header() {
   return (
@@ -45,7 +46,8 @@ export default function Header() {
           </a>
         </nav>
 
-        <div className="flex flex-wrap items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <ThemeToggle />
           <a
             aria-label="Allan Binga on GitHub"
             className="hidden sm:inline-flex items-center justify-center w-9 h-9 border border-soft-neutral bg-white hover:border-[#800020] text-charcoal rounded transition-colors"

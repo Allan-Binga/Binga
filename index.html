@@ -2,6 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <script>
+      (() => {
+        let theme;
+        try { theme = localStorage.getItem("portfolio-theme"); } catch { /* Storage may be unavailable. */ }
+        const dark = theme === "dark" || (theme !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+        document.documentElement.classList.toggle("dark", dark);
+      })();
+    </script>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Allan Binga — Full-Stack JavaScript Engineer · Nairobi, Kenya</title>
     <meta

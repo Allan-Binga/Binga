@@ -1,3 +1,4 @@
+import PublicationProject from "./PublicationProject.jsx";
 import PrestigeProject from "./PrestigeProject.jsx";
 import MonitoringProject from "./MonitoringProject.jsx";
 import FastStoreProject from "./FastStoreProject.jsx";
@@ -20,15 +21,13 @@ export default function SelectedWork() {
         </p>
       </div>
 
-      <PrestigeProject></PrestigeProject>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
-        <MonitoringProject></MonitoringProject>
-
-        <FastStoreProject></FastStoreProject>
+      <div className="grid grid-cols-1 lg:grid-cols-2 auto-rows-fr gap-gutter items-stretch">
+        <PrestigeProject />
+        <PublicationProject />
+        <MonitoringProject />
+        <FastStoreProject />
+        <MurandiProject />
       </div>
-
-      <MurandiProject></MurandiProject>
     </section>
   );
 }
